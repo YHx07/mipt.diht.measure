@@ -1,0 +1,16 @@
+\begin{task}{4}
+Пусть  $\mathbb{Q}_[0, 1] = \{r_n\}_{n=1}^{\infty}$,Доказать, что последовательность 
+$$f_n(x) = 
+\begin{cases}
+0, \text{ если } x=r_n \\
+\frac{1}{\sqrt{n}(x - r_n}, \text{ если } x \in [0, 1] \setminus \{r_n\}
+\end{cases}$$ сходится по классической мере Лебега на $[0, 1]$.
+\end{task}
+
+\begin{solution}
+Пусть дано $\varepsilon > 0$. Тогда
+$$E_n = \{ x \in [0, 1]: f_n(x) > \varepsilon\} = \left( \left(r_n - \dfrac{1}{\sqrt{n}\varepsilon}, r_n - \dfrac{1}{\sqrt{n}\varepsilon} \right) \setminus {r_n} \right) \cap [0, 1] $$
+для $n \in \mathbb{N}$. Тогда
+$$ \mu(E_n) \leqslant \dfrac{2}{\sqrt{n}\varepsilon} \to 0 \text{ при } n \to \infty $$
+Следовательно, $f_n$ сходится по классической мере Лебега на $[0, 1]$.
+\end{solution}

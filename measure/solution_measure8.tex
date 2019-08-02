@@ -1,0 +1,36 @@
+\begin{task}{8}
+Пусть $m$ --- мера на кольце $R$ и для любых таких множеств 
+$A, A_1, \dots A_i, \dots$ из $R$, что $A_1 \subseteq A_2 \subseteq \dots$ и
+$$A = \bigcap_{i=1}^{\infty} A_i$$
+выполняется 
+\begin{equation}\label{limEq}
+    m(A) = \lim_{i \to \infty} m(A_i).
+\end{equation}
+Докажите, что $m$ --- $\sigma$-аддитивная мера. Показать, что это утверждение может не быть справедливым для меры на полукольце.
+\end{task}
+
+\begin{solution}
+Пусть $B, B_1, \dots B_i, \dots$ принадлежат $R$ и 
+$$B = \bigsqcup_{i=1}^{\infty} B_i.$$ Определим множества
+$$ C_l = \bigsqcup_{i=1}^{l} B_i = B \setminus \left(\bigsqcup_{i = l+1}^{\infty} B_i \right), l = 1, 2, \dots.$$
+Тогда $C_1 \subseteq C_2 \subseteq \dots$ и
+$$ \bigcup_{l=1}^{\infty} C_l = B.$$
+Тогда множества $C_1, C_2, \dots$ удовлетворяют условию~\eqref{limEq}, следовательно
+$$m(B) = \lim_{l \to \infty} m(C_l).$$
+Если нашлось такое $n$, что $m(B_n) = +\infty$, то очевидным образом 
+$$m(B) = +\infty = \sum_{i=1}^{\infty} m(B_i).$$
+Иначе
+$$ m(B) = \lim_{l \to \infty} m(C_l) = \lim_{l \to \infty} m\left( \bigsqcup_{i=1}^{l} B_i \right) = \lim_{l \to \infty} \sum_{i=1}^{l} m(B_i) = \sum_{i=1}^{\infty} m(B_i),$$ что и требовалось доказать.
+
+Рассмотрим полукольцо $S = \{\langle a, b \rangle \cap \mathbb{Q}: 0 \leqslant a \leqslant b \leqslant 1\} \cup \{\varnothing\}$ и меру $m(\langle a, b \rangle) = b - a$ (аналогично задаче 5). Покажем, что $m$ непрерывна, но не $\sigma$-аддитивна.
+
+Пусть $\mathbb{Q} \cap [0, 1] = \{r_n\}_{n=1}^{\infty}$. Заметим, что для любого $n \text{ } m(\langle r_n, r_n \rangle) = 0$. Поэтому
+$$ 1 = m(\mathbb{Q} \cap [0, 1]) = m\left(\bigsqcup_{i=1}^{\infty} m(\langle r_n, r_n \rangle) \right) \neq \sum_{i=1}^{\infty} m(\langle r_n, r_n \rangle) = 0,$$
+т.е $m$ не $\sigma$-аддитивна.
+
+Пусть теперь $A, A_1, \dots \in S: A_1 \subseteq A_2 \subseteq \dots$ и
+$$ A = \bigcup_{i=1}^{\infty} A_i.$$
+Если $A = \langle a, b \rangle, A_i = \langle a_i, b_i \rangle$, то $a_i \to a, b_i \to b$. Следовательно,
+$$\lim_{i \to \infty} m(A_i) = \lim_{i \to \infty} (b_i - a_i) = b - a = m(A),$$
+т.е мера $m$ непрерывна.
+\end{solution}

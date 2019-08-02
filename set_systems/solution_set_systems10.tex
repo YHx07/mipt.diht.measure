@@ -1,0 +1,27 @@
+\begin{task}{10}
+Существует ли такая счетная система подмножеств $R$, что $\sigma (R)$ -- борелевская $\sigma$-алгебра?
+\end{task}
+
+\begin{solution}
+Для начала рассмторим $\mathfrak{B}\left(\mathbb{R}\right)$. Заметим, что $\forall X \in \mathfrak{B}\left(\mathbb{R}\right)$ выполено: \[ X = \underset{n}{\bigsqcup} \langle a_n, b_n \rangle,\] где $a_n, b_n \in \mathbb{R}$ и $a_n \leq b_n$.
+
+Пусть $R = \lbrace (-\infty, a) : ~ a \in \mathbb{Q} \rbrace \sqcup \lbrace (-\infty, a] : ~ a \in \mathbb{Q} \rbrace \sqcup \lbrace (a, +\infty ) : ~ a \in \mathbb{Q} \rbrace \sqcup \lbrace [a, +\infty ) : ~ a \in \mathbb{Q} \rbrace$
+
+Докажем, что $\sigma (R) = \mathfrak{B}(\mathbb{R})$.
+Доказательство:
+\begin{enumerate}
+    \item $\sigma (R)$ содержит все промежутки вида $\langle a, b \rangle$, где $a, b \in \mathbb{Q}$.
+    
+    \item из $1.$ следует, что $\sigma (R)$ содержит все множества вида $\underset{n}{\bigsqcup} \langle a_n, b_n \rangle$, где $a_n, b_n \in \mathbb{Q}$ и $a_n \leq b_n$.
+    
+    \item $\sigma (R)$ содержит все промежутки вида $\langle a, b \rangle$, где $a, b \in \mathbb{R}$, так как рассмторим последовательности ${a_n}$, ${b_n}$ из $\mathbb{Q}$ такие, что ${a_n}$ возрастает, ${b_n}$ убывает и $\underset{n\to\infty}{\lim} a_n = a$ и $\underset{n\to\infty}{\lim} b_n = b$. Тогда $\langle a, b \rangle = \underset{n}{\bigcap} \langle a_n, b_n \rangle$, откуда следует, что $\langle a, b \rangle$ лежит в $\sigma (R)$
+    
+    \item из того, что $\langle a, b \rangle$ лежит в $\sigma (R)$ следует, что $\sigma (R)$ содержит все множества вида $\underset{n}{\bigsqcup} \langle a_n, b_n \rangle$, где $a_n, b_n \in \mathbb{Q}$ и $a_n \leq b_n$. Здесь все границы интервалов действительны.
+\end{enumerate}
+
+Тогда мы имеем, что $\mathfrak{B}(\mathbb{R}) \subseteq \sigma(R)$.
+
+Из построения $R$ следует, что $\sigma (R) \subseteq \mathfrak{B}(\mathbb{R})$.
+
+Тогда имеем, что $\mathfrak{B}(\mathbb{R}) = \sigma(R)$. А по построению $R \sim \mathbb{Q} \sim \mathbb{N}$.
+\end{solution}

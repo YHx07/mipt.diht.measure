@@ -1,0 +1,17 @@
+\begin{task}{6}
+Доказать, что набор множеств, замкнутый относительно операций
+\begin{enumerate}[a)]
+    \item $\cap$ и $\cup$,
+    \item $\cap$ и $\backslash$ может не быть кольцом.
+\end{enumerate}
+
+\end{task}
+\begin{solution}
+    \begin{enumerate}[a)]
+        \item
+        $S = \lbrace \varnothing, \lbrace 1 \rbrace, \lbrace 1, 2 \rbrace \rbrace $ замкнут относительно $\cup$ и $\cap$, но кольцом не является, потому что $\{1,2\}\triangle\{1\} = \{2\} \notin S$.
+        
+        \item
+        $S = \lbrace \varnothing, \lbrace 1 \rbrace, \lbrace 2 \rbrace \rbrace$ замкнут относительно $\cap$ и $\setminus$, но кольцом не является, потому что $\{1\} \triangle \{2\} = \{1, 2\} \notin S$.
+    \end{enumerate}
+\end{solution}

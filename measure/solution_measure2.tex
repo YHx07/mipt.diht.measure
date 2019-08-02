@@ -1,0 +1,49 @@
+\begin{task}{2}
+Пусть $m$ --- мера на полукольце $S$. Докажите, что
+\begin{enumerate}[(a)]
+    \item если множества $A$ и $B$ принадлежат $S$ и $B \subseteq A$, то $m(B) \leqslant m(A)$.
+    \item $m(\varnothing) = 0$
+    \item Если $A, B, A \cup B \in S$, то $m(A \cup B) = m(A) + m(B) - m (A\cap B)$
+    \item Если $A, B, A \triangle B \in S$ и $m(A \triangle B) = 0$, то $m(A) = m(B)$
+\end{enumerate}
+\end{task}
+\begin{solution}
+\begin{enumerate}[(a)]
+    \item Из определения полукольца следует, что $\exists B_1, \dots, B_n \in S :$ 
+    \begin{equation*}
+        A \setminus B  = \bigsqcup_{i = 1}^{n} B_i
+    \end{equation*}
+    Тогда из аддитивности меры получим, что
+    \begin{equation}\label{measureEq}
+        m(A) = m(B) + \sum_{i = 1}^{n} m(B_i)
+    \end{equation}
+    В силу неотрицательности меры~\eqref{measureEq} влечет за собой неравентво $m(B) \leqslant m(A)$.
+    \item Т.к $\varnothing \cap \varnothing = \varnothing$, то $\varnothing = \varnothing \sqcup \varnothing \rightarrow m(\varnothing) = m(\varnothing \sqcup \varnothing) = m(\varnothing) + m(\varnothing) \rightarrow m(\varnothing) = 0$.
+    \item Т.к $A \cup B = (A \setminus B) \sqcup B$ и $A \cup B \in S$, то $\exists B_1, \dots, B_n \in S :$
+    \begin{equation*}
+        A \setminus B  = \bigsqcup_{i = 1}^{n} B_i
+    \end{equation*}
+    Тогда в силу аддитивности меры
+    \begin{equation}\label{2cfirstEq}
+        m(A \cup B) = m(B) + \sum_{i = 1}^{n} m(B_i)
+    \end{equation}
+    С другой стороны, $A = (A \cap B) \sqcup (A \setminus B)$ и $A \cup B \in S$ по определению полукольца, поэтому
+    \begin{equation}\label{2csecondEq}
+        m(A) = m(A \cap B) + \sum_{i = 1}^{n} m(B_i)
+    \end{equation}
+    Вычитая~\eqref{2cfirstEq} из~\eqref{2csecondEq}, получим
+    \begin{equation*}
+        m(A \cup B) - m(A) = m(B) - m(A \cap B) \rightarrow m(A \cup B) = m(A) + m(B) - m(A\cap B),
+    \end{equation*}
+    ч.т.д.
+    \item Пусть $A \setminus B = \bigsqcup_{i = 1}^{n} A_i,\hspace{3mm} B \setminus A = \bigsqcup_{j = 1}^{k} B_j; \hspace{5mm}A_j, B_j \in S$ (аналогично задачам 1 и 3). Тогда, т.к $A \triangle B  = (A \setminus B) \sqcup (B \setminus A)$
+    \begin{equation*}
+        m(A \triangle B) = \sum_{i = 1}^{n} m(A_i) + \sum_{j = 1}^{k} m(B_j)
+    \end{equation*}
+    Т.к $m(A \triangle B) = 0$ и $m$ неотрицательна,
+    \begin{equation}\label{equaltoZero}
+    \sum_{i = 1}^{n} m(A_i) = \sum_{j = 1}^{k} m(B_j) = 0.
+    \end{equation}
+    Воспользовавшись тем, что $A = (A \cap B) \sqcup (A \setminus B)$ и $B = (A \cap B) \sqcup (B \setminus A)$ и равенством~\eqref{equaltoZero}, получим, что $m(A) = m(A\cap B) = m(B)$.
+\end{enumerate}
+\end{solution}

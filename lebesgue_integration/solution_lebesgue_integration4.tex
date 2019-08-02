@@ -1,0 +1,11 @@
+\begin{task}{4}
+Пусть $f(x)$ интегрируема по Лебегу на множестве $A$ (т.е. $\int_A|f(x)|d\mu < \infty$, будем писать $f \in L_1(A)$). Доказать, что $\mu(\lbrace x \in A : f(x) = \pm \infty \rbrace) = 0$.
+\end{task}
+
+\begin{solution} 
+Можно считать, что $f(x) \geqslant 0$ на $A$. Пусть $A_1 = \lbrace x \in A : f(x) = +\infty\rbrace \in M$. Предположим, что $\mu(A_1) > 0$. Положим $A_2 = A_1$, если $\mu(A_1) < \infty$, иначе выберем множество $A_2 \subset A_1, A_2 \in M$ с $0 < \mu(A_2) < \infty$. Определим простые функции $h_n(x) = n\chi_{A_2}(x)$ для $n \in \mathbb(N)$. Ясно, что $0 \leqslant h_n(x) \leqslant f(x)$ при $n \in \mathbb{N}$ и $x \in E$, т.е. $h_n(x) \in Q_f$. Тогда по определению интеграла Лебега получаем, что 
+\[
+\int_A f(x)d\mu \geqslant \sup_n \int_A h_n(x)d\mu = \sup_n n\mu(A_2) = \infty,
+\]
+а это противоречит условию интегрируемости $f$.
+\end{solution}

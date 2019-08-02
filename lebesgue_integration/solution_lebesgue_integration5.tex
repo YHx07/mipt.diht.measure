@@ -1,0 +1,14 @@
+\begin{task}{5}
+Построить такую последовательность $\lbrace f_n(x)\rbrace_{n=1}^\infty$ неотрицательных функций из $L_1([0;1])$, таких что $f_n(x) \rightarrow 0$ при $n \rightarrow \infty$ для каждого $x \in [0; 1]$, но
+\[
+\int\limits_0^1 f_n(x)d\mu \nrightarrow 0, n \rightarrow \infty.
+\]
+\end{task}
+
+\begin{solution} 
+Пусть $f_n(x) = n\chi_{(0,\frac{1}{n})}(x)$ при $x \in [0, 1]$ и $n \in \mathbb{N}$. Тогда $f_n(x) \xrightarrow{n \rightarrow \infty} 0$ для каждого $x \in [0, 1]$, но 
+\[
+\int\limits_{[0,1]}f_n(x)d\mu = 1
+\]
+при всех $n$.
+\end{solution}

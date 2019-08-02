@@ -1,0 +1,13 @@
+\begin{task}{2}
+Пусть $(X, M, \mu)$ -- измеримое пространство, $A \subseteq X$ и $f(x) = \mathbb{I}_A(x)$. Доказать, что $f(x)$ измерима на $X$ тогда и только тогда, когда $A \in M$.
+\end{task}
+\begin{solution}
+%Пусть $f$ -- измерима, тогда $\forall c E_c = {x \in X : f(x) > c}$ -- измеримо. Тогда при $c = 0 E_c = A$, откуда следует, что $A$ - измеримо.
+
+%Обратно, пусть $A$ -- измеримо, тогда $E_c$ может быть равно $X$, $A$, $\varnothing$, которые измеримы, тогда измерима и $f(x)$.
+$\forall c < 0 \Rightarrow f^{-1}((c, +\infty)) = X \in M$.
+
+$\forall c > 1 \Rightarrow f^{-1}((c; +\infty)) = \emptyset \in M$
+
+$\forall c \in [0, 1] \Rightarrow f^{-1}((c;+\infty)) = A. $ Следовательно, функция измерима тогда и только тогда, когда $A \in M$.
+\end{solution}

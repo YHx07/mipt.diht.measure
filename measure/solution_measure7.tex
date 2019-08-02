@@ -1,0 +1,19 @@
+\begin{task}{7}
+Пусть $m$ --- $\sigma$-аддитивная мера на полукольце $S$, множества 
+$A, A_1, \dots A_i, \dots$ принадлежат $S$, причем $A_1 \subseteq A_2 \subseteq \dots$ и
+$$A = \bigcup_{i=1}^{\infty} A_i.$$
+Доказать, что 
+$$m(A) = \lim_{i \to \infty} m(A_i).$$
+\end{task}
+
+\begin{solution}
+Определим для каждого $i \geqslant 1$ множество $B_i = A_{i+1} \setminus A_i$. Тогда 
+$$A \setminus A_1 = \bigsqcup_{i=1}^{\infty} B_i.$$
+Так как $S$ --- полукольцо, то $\forall k \text{ } \exists C_1, \dots, C_{j_k} \in S$, такое что
+$$B_k = \bigsqcup_{j=1}^{j_k}C_j.$$
+Отсюда получим, что
+$$ m(A) - m(A_1) = \sum_{i=1}^{\infty} \sum_{j=1}^{j_i} m(C_j) = \lim_{i \to \infty} \sum_{k = 1}^{i - 1} \sum_{j=1}^{j_k} m(C_j) = \lim_{i \to \infty} (\sum_{k=1}^{i-1}(m(A_{k+1}) - m(A_k))) = $$
+$$ = \lim_{i \to \infty} (m(A_{i}) - m(A_1)) = \lim_{i \to \infty} m(A_i) - m(A_1).$$
+Из этого следует, что 
+$$m(A) = \lim_{i \to \infty} m(A_i).$$
+\end{solution}
