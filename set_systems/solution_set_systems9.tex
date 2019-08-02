@@ -1,0 +1,12 @@
+\begin{task}{9}
+Есть поток сигма-алгебр $F_1 \subset F_2 \subset \ldots$ Является ли $\sigma$-алгеброй объединение всех этих систем?
+\end{task}
+\begin{solution}
+    Пусть $F_n$ -- $\sigma$-алгебра, порожденная $\{\varnothing, \{1\}, \{2\}, \ldots, \{n\}, \{n + 1, n + 2, \ldots\}\}$.
+    
+    Пусть $X$ -- множество всех нечентых чисел из $\mathbb{N}$.
+    
+    Пусть $F = \underset{n=1}{\overset{\infty}{\bigcup}} F_n$.
+    
+    Тогда $F$ -- не $\sigma$-алгебра, так как $\forall x \in X$ выполено,что $x \in F$, но $X \notin F$, а значит не выполняется замкнутость относительно счетного объединения ($X \sim \mathbb{N}$).
+\end{solution}

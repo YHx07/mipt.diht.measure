@@ -1,0 +1,12 @@
+\begin{task}{3}
+Привести пример последовательности $A_1$, $A_2$, ..., что $\overline{\lim_n}A_n  \neq \underline{\lim}_n A_n.$ Доказать, что
+\begin{equation*}
+    \overline{\overline{\lim_n}A_n}  = \underline{\lim}_n \overline{A_n}.
+\end{equation*}
+\end{task}
+\begin{solution}
+Пример: $A_{2k} = \{1\}$, $A_{2k + 1} = \varnothing$.
+\begin{equation*}
+    \overline{\varlimsup_{n \to \infty} A_n} = \overline{ \underset{n}{\bigcap} \left( \underset{k \geq n}{\bigcup} A_k \right)} = \underset{n}{\bigcup} \left( \underset{k \geq n}{\bigcap} \overline{A}_k \right) = \varliminf_{n \to \infty} \overline{A}_n
+\end{equation*}
+\end{solution}

@@ -1,0 +1,25 @@
+\begin{task}{1}
+Доказать, что
+\begin{equation*}
+    \overline{\lim_n}A_n =\displaystyle{\bigcap_n} \Big(\bigcup_{k \ge n} A_k\Big) \;\;\;\;\; \underline{\lim}_n A_n =\displaystyle{\bigcup_n} \Big(\bigcap_{k \ge n} A_k\Big).
+\end{equation*}
+\end{task}
+\begin{solution}
+%Сначала разберемся с верхним пределом. Все элементы, которые пренадлежат бесконечному числу множеств из $A_n$ будут попадать в пересечение, так как всегда для любого $n$ найдется $k$, такое, что $x \in A_k$ по определению бесконечной подпоследовательности. Теперь заметим, что все элементы, которые принадлежат пересечению, пренадлежат бесконечному числу множеств из $A_n$, так как если бы они принадлежали конечному числу множеств, начиная с некоторого номера, они бы перестали попадать в пересечение. Значит правая часть эквивалента определению верхнего предела. С нижним пределом эквивалентные рассуждения.
+
+Верхний предел последовательности множеств $A_n$ состоит из тех и только тех элементов $x$, каждый из которых принадлежит бесконечному числу множеств последовательности $A_n$.
+
+Нижний предел последовательности множеств $A_n$ состоит из тех и только тех элементов $x$, каждый из которых принадлежит всем множествам последовательности $A_n$, за исключением, быть может, конечного числа. 
+
+Верхний предел.
+
+Пусть $x \in \underset{n}{\bigcap} \left( \underset{k \geq n}{\bigcup} A_k \right)$, тогда $\forall n ~ x \in \underset{k \geq n}{\bigcup} A_k$, откуда следует, что $\exists \lbrace n_k \rbrace : \forall k ~ x \in a_{n_k}$, значит $x \in \underset{n \to \infty}{\varlimsup} A_n$.
+
+Нижний предел.
+
+Пусть $x \in \underset{n}{\bigcup} \left( \underset{k \geq n}{\bigcap} A_k \right)$, тогда $\exists N : x \in \underset{k \geq N}{\bigcap} A_k$, значит $x \in \underset{n \to \infty}{\varliminf} A_n$.
+
+Получили, что $\underset{n}{\bigcup} \left( \underset{k \geq n}{\bigcap} A_k \right) \subseteq \underset{n \to \infty}{\varliminf} A_n$ и $\underset{n}{\bigcap} \left( \underset{k \geq n}{\bigcup} A_k \right) \subseteq \underset{n \to \infty}{\varlimsup} A_n$.
+
+Обратные включения доказываются тривиально. 
+\end{solution}

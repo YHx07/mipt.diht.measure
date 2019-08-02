@@ -1,0 +1,26 @@
+\begin{task}{2}
+Доказать, что если последовательность множеств $\{A_n\}$ монотонна, то
+\begin{equation*}
+    \overline{\lim_n}A_n  = \underline{\lim}_n A_n.
+\end{equation*}
+При этом $\lim_n A_n = \bigcup_n A_n$, если $A_n$ возрастают и $\lim_n A_n = \bigcap_n A_n$, если $A_n$ убывают.
+\end{task}
+\begin{solution}
+%Доказательство проводится с помощью представления верхнего и нижнего пределов как в предыдущей задаче.
+Рассмотрим два варианта:
+\begin{enumerate}
+    \item $\lbrace A_n \rbrace$ монотонно возрастает, т.е. $\forall n \hookrightarrow A_n \subset A_{n+1}$.
+    
+    $ \underset{n \to \infty}{\varliminf} A_n = \underset{n}{\bigcup} \left( \underset{k \geq n}{\bigcap} A_k \right) = \underset{n}{\bigcup} \left(A_n\right) = \underset{n}{\bigcup} A_n$, так как из монотонности следует, что $\forall ~ n \underset{k \geq n}{\bigcap} A_k = A_n$.
+    
+    $\underset{n \to \infty}{\varlimsup} A_n = \underset{n}{\bigcap} \left( \underset{ k \geq n}{\bigcup} A_k \right) = \underset{n}{\bigcap} \left(\underset{k}{\bigcup} A_k\right) = \underset{n}{\bigcup} A_n$, так как из монотонности следует, что $\forall n ~ \underset{k \geq n}{\bigcup} A_k = \underset{p}{\bigcup} A_p$.
+    
+    \item $\lbrace A_n \rbrace$ монотонно убывает, т.е. $\forall ~ n \hookrightarrow A_{n+1} \subset A_n$.
+    
+     $ \underset{n \to \infty}{\varliminf} A_n = \underset{n}{\bigcup} \left( \underset{k \geq n}{\bigcap} A_k \right) = \underset{n}{\bigcup} \left(\underset{k}{\bigcap}A_k\right) = \underset{n}{\bigcap} A_n$, так как из монотонности следует, что $\forall n ~ \underset{k \geq n}{\bigcap} A_k = \underset{p}{\bigcap} A_p$.
+    
+    $\underset{n \to \infty}{\varlimsup} A_n = \underset{n}{\bigcap} \left( \underset{ k \geq n}{\bigcup} A_k \right) = \underset{n}{\bigcap} \left(A_n\right) = \underset{n}{\bigcap} A_n$, так как из монотонности следует, что $\forall n ~ \underset{k \geq n}{\bigcup} A_k = A_n$.
+\end{enumerate}
+
+Из вышеописанных равенств следует то, что нам надо в задаче.
+\end{solution}

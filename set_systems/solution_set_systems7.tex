@@ -1,0 +1,51 @@
+\begin{task}{7}
+Пусть $\mathfrak{B_1}$ и $\mathfrak{B_2}$ --- две $\sigma$-алгебры подмножеств пространства $\Omega$. Являются ли $\sigma$-алгебрами классы множеств: 
+\begin{enumerate}[1)]
+    \item $\mathfrak{B_1} \cap \mathfrak{B_2}$;
+    \item $\mathfrak{B_1} \cup \mathfrak{B_2}$;
+    \item $\mathfrak{B_1} \setminus \mathfrak{B_2}$;
+    \item $\mathfrak{B_1} \triangle \mathfrak{B_2}$.
+\end{enumerate}
+
+\end{task}
+\begin{solution}
+\begin{enumerate}[1)]
+    \item $\mathfrak{B} = \mathfrak{B}_1 \cap \mathfrak{B}_2$ -- $\sigma$-аглебра:
+    \begin{enumerate}[a)]
+        \item
+        $\varnothing \in \mathfrak{B}_1, ~ \varnothing \in \mathfrak{B}_2 \Rightarrow \varnothing \in \mathfrak{B}$.
+        
+        \item
+        $X,~Y \in \mathfrak{B} \Rightarrow X,~Y \in \mathfrak{B}_1; ~ X,~Y \in \mathfrak{B}_2 \Rightarrow X \cap Y \in \mathfrak{B};~ X \Delta Y \in \mathfrak{B}$, так как $X \cap Y \in \mathfrak{B}_1,~ X \Delta Y \in \mathfrak{B}_1$ и $X \cap Y \in \mathfrak{B}_2,~ X \Delta Y \in \mathfrak{B}_2$.
+        
+        \item
+        $A_1, \ldots, A_n, \ldots \in \mathfrak{B} \Rightarrow A_1, \ldots, A_n, \ldots \in \mathfrak{B}_1; A_1, \ldots, A_n, \ldots \in \mathfrak{B}_2 \Rightarrow \underset{n}{\bigcap} A_n \in \mathfrak{B}$, так как $\underset{n}{\bigcap} A_n \in \mathfrak{B}_1$ и $\underset{n}{\bigcap} A_n \in \mathfrak{B}_2$.
+        
+        \item
+        $\Omega \in \mathfrak{B} \Rightarrow \Omega \in \mathfrak{B}_1;~\Omega \in \mathfrak{B}_2 \Rightarrow \Omega$ -- единица в $\mathfrak{B}$.
+    \end{enumerate}
+    
+    \item
+    $\mathfrak{B_1} = \{\mathbb{R}, \varnothing, (-\infty; 1), [1; +\infty)\}$
+    
+    $\mathfrak{B_2} = \{\mathbb{R}, \varnothing, (-\infty; 2), [2; +\infty)\}$
+    
+    $\mathfrak{B_1} \cup \mathfrak{B_2} = \{\mathbb{R}, \varnothing, (-\infty; 1), [1; +\infty), (-\infty; 2), [2; +\infty)\}$
+    
+    Пересечение двух элементов из объединения $(-\infty; 2) \cap [1; +\infty) = [1, 2) \notin~\mathfrak{B_1}~\cup~\mathfrak{B_2}$, значит объединение не является даже кольцом, поэтому $\mathfrak{B_1} \cup \mathfrak{B_2}$ --- не $\sigma$-алгебра.
+    
+    \item
+    $\mathfrak{B_1} = \{\mathbb{R}, \varnothing, (-\infty; 1), [1; +\infty)\}$
+    
+    $\mathfrak{B_2} = \{\mathbb{R}, \varnothing, (-\infty; 2), [2; +\infty)\}$
+    
+    $\mathfrak{B} = \mathfrak{B}_1 \setminus \mathfrak{B}_2 = \{(-\infty; 1);[1;+\infty)\} $ -- не $\sigma$-алгебра, так как $\varnothing \notin \mathfrak{B}$.
+    
+    \item
+    $\mathfrak{B_1} = \{\mathbb{R}, \varnothing, (-\infty; 1), [1; +\infty)\}$
+    
+    $\mathfrak{B_2} = \{\mathbb{R}, \varnothing, (-\infty; 2), [2; +\infty)\}$
+    
+    $\mathfrak{B} = \mathfrak{B}_1 \triangle \mathfrak{B}_2 = \{(-\infty; 1),[1;+\infty),(-\infty; 2), [2; +\infty)\} $ -- не $\sigma$-алгебра, так как $\varnothing \notin \mathfrak{B}$.
+\end{enumerate}
+\end{solution}

@@ -1,0 +1,39 @@
+\begin{task}{4}
+Пусть $f: A \rightarrow B$ --- отображение множеств, $\mathfrak{A}$ -- система подмножетсв множества $A$, $\mathfrak{B}$ -- система подмножеств множества $B$. Положим
+\begin{align*}
+    f(\mathfrak{A}) &= \{f(X) \subset B: X \in \mathfrak{A}\}\\
+    f^{-1}(\mathfrak{B}) &= \{f^{-1}(Y) \subset A: Y \in \mathfrak{B}\}.\\
+\end{align*}
+\begin{enumerate}[(a)]
+    \item Показать, что $f(\mathfrak{A})$, вообще говоря, не обязано быть кольцом, если $\mathfrak{A}$ -- кольцо.
+    \item Доказать, что если $\mathfrak{B}$ -- кольцо ($\sigma$-алгебра), то $f^{-1}(\mathfrak{B})$ -- кольцо ($\sigma$-алгебра).
+\end{enumerate}
+
+\end{task}
+\begin{solution}
+\begin{enumerate}[(a)]
+    \item $A = \{1, 2, 3, 4\}$, $B = \{a, b, c\}$  и $\mathfrak{A} = \{\varnothing, \{1, 2\}, \{3, 4\}, A\}$, очевидно $\mathfrak{A}$ -- кольцо. Пусть $f(1) = a$, $f(2) = f(3) = b$, $f(4) = c$. Тогда $f(\mathfrak{A}) = \{\varnothing, \{a, b\}, \{b, c\}, B\}$ -- не кольцо, потому что $\{a, b\} \cap \{b, c\} = \{b\} \notin f(\mathfrak{A})$.
+    
+    \item (не уверен) Пусть $\mathfrak{B}$ -- кольцо ($\sigma$-алгебра).
+    \begin{enumerate}[1)]
+        \item $\varnothing \in f^{-1}(\mathfrak{B})$, так как $\varnothing = f^{-1}(\varnothing)$, а $\varnothing \in \mathfrak{B}$.
+        
+         \item
+        $A, B \in  f^{-1}(\mathfrak{B}) \Rightarrow \exists \Phi,\Psi :  A = f^{-1}(\Phi), B = f^{-1}(\Psi)$.
+        \begin{itemize}
+            \item $A \cap B \in  f^{-1} ( \mathfrak{B} )$, так как $f^{-1} ( \Phi \cap \Psi ) = f^{-1} ( \Phi ) \cap f^{-1} ( \Psi ) = A \cap B$, а $\Phi \cap \Psi \in \mathfrak{B}$.
+            \item $A \Delta B \in  f^{-1} ( \mathfrak{B} )$, так как $f^{-1} ( \Phi \Delta \Psi ) = f^{-1} ( \Phi ) \Delta f^{-1} ( \Psi ) = A \Delta B$, а $\Phi \Delta \Psi \in \mathfrak{B}$.
+        \end{itemize}
+        
+        \item
+        Пусть $E$ -- единица в $\mathfrak{B}$. Тогда $\forall X \in \mathfrak{B} ~ X \subseteq E$. 
+        
+        Тогда из того, что $\forall A, B \in \mathfrak{B} : A \subseteq B$ выполнено $f^{-1}(A) \subseteq f^{-1} (B)$, следует, что $f^{-1} (E)$ -- единица в $f^{-1} ( \mathfrak{B} )$.
+        
+        \item
+        Пусть $A_1 \ldots A_n \ldots \in f^{-1} ( \mathfrak{B} )$, тогда $\exists ~ B_1 \ldots B_n \ldots ~ \in \mathfrak{B} : ~ \forall n ~ A_n = f^{-1} (B_n)$. Тогда $\underset{n}{\bigcup}A_n \in f^{-1} ( \mathfrak{B} )$, так как $f^{-1} ( \underset{n}{\bigcup} B_n ) = \underset{n}{\bigcup} f^{-1} (B_n) = \underset{n}{\bigcup} A_n$, а $\underset{n}{\bigcup} B_n \in \mathfrak{B}$
+        
+        Из первых двух равенств следует, что $f^{-1} ( \mathfrak{B} )$ -- кольцо, если $\mathfrak{B}$ -- кольцо или $\sigma$-алгебра, а из последних двух следует, что $f^{-1}(\mathfrak{B})$ -- $\sigma$-алгебра, только если $\mathfrak{B}$ -- $\sigma$-алгебра.
+    \end{enumerate}
+\end{enumerate}
+\end{solution}
