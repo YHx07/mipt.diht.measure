@@ -1,0 +1,25 @@
+\begin{task}{4}
+Докажите, что если $E \subseteq \mathbb{R}$ измеримо, то для любого $A \subseteq \mathbb{R}$ выполено \[ \mu^*(A) = \mu^*(A \setminus E) + \mu^*(A \cap E) \]
+\end{task}
+
+\begin{solution}
+\begin{enumerate}
+    \item
+    Пусть $A \cap E \subseteq \bigcup B_i$, $A \setminus E \subseteq \bigcup C_j$, тогда $A \subseteq \left( \bigcup B_i \right) \cup \left( \bigcup C_j \right)$.
+    
+    Тогда: $\mu^*(A) \leq \sum m(B_i) + \sum m(C_j) \rightarrow \mu^*(A) \leq \mu^*(A \cup E) + \mu^*(A \setminus E)$ (По предельному переходу).
+    
+    \item
+    Пусть $E \subseteq \bigcup E_i^\delta$, причем $\mu^*(E \Delta \bigcup E_i^\delta) < \delta$; $A \subseteq \bigcup A_j$.
+    
+    Тогда: $A \setminus \bigcup E_i^\delta \subseteq \left(\bigcup A_j\right) \setminus \left(\bigcup E_i^\delta\right)$
+    
+    и $\mu^*(A \setminus \bigcup E_i^\delta) \leq m((\bigcup A_j) \setminus (\bigcup E_i^\delta)) = m(\bigcup A_j) - m((\bigcup A_j) \cap (E_i^\delta))$.
+    
+    $\mu^*(A \cap (\bigcup E_i^\delta)) \leq m((\bigcup A_j) \cap (\bigcup E_i^\delta))$.
+    
+    Тогда: $\mu^*(A \cap \bigcup E_i^\delta) + \mu^*(A \setminus \bigcup E_i^\delta) \leq m(\bigcup A_i) \rightarrow \mu^*(A \cap \bigcup E_i^\delta) + \mu^*(A \setminus \bigcup E_i^\delta) \leq \mu^*(A)$ тогда используя предельный переход по $\delta$ имеем: $\mu^*(A \cap E) + \mu^*(A \setminus E) \leq \mu^*(A)$
+\end{enumerate}
+
+Таким обоазом, $\mu^*(A) = \mu^*(A \cap E) + \mu^*(A \setminus E)$.
+\end{solution}

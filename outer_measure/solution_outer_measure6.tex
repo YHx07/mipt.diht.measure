@@ -1,0 +1,31 @@
+\begin{task}{6}
+Пусть множество $E \subseteq \mathbb{R}$ имеет положительную меру Лебега. Докажите, что множество $E - E = \{x - y: x, y \in E\}$ содержит интервал с центром в 0.
+\end{task}
+\begin{solution}
+Пусть дано $\varepsilon > 0$. Рассмотрим такие множества $K$ - компакт, $O$ - октрытое множество, что:
+\begin{equation}
+    K \subseteq E \subseteq O, \mu(K) + \varepsilon > \mu(E) > \mu(O) - \varepsilon.
+\end{equation}
+Пусть также $2 \mu(K) > \mu(O)$.
+
+Возьмем такую $\delta$, что $\forall k \in K \Rightarrow U_{\delta}(k) \subseteq O$. Тогда $U_{\delta / 2}(k) \subseteq U_{\delta}(k) \subseteq O$. Рассмотрим следующее множество $\{U_{\delta / 2}(k): k \in K\}$ -- открытое покрытие компакта. Тогда в нем можно выбрать конечное покрытие $\{U_{\delta / 2}(k_1), \dots, U_{\delta / 2}(k_n)\}$.
+
+Тогда ('+' - сумма Минковского):
+\begin{equation}
+    K + (-\delta / 2; \delta / 2) \subset \bigcup_{i=1}^{n}{U_{\delta / 2}(k_i)} + (-\delta / 2; \delta / 2) \subset \bigcup_{i=1}^{n}{U_{\delta}(k_i)} \subset O.
+\end{equation}
+
+Покажем, что $\forall v \in (-\delta / 2; \delta / 2) \Rightarrow (K + v) \cap K \not = \emptyset$. Пусть это не так:
+\begin{align*}
+& \forall v \in (-\delta / 2; \delta / 2) \Rightarrow \left(K + v\right) \cup K \subset K + (-\delta / 2; \delta / 2) \subset O \\
+    & \mu(K + v) + \mu(K) < \mu(O) \\
+    &\exists v \in (-\delta / 2; \delta / 2): (K + v) \cap K = \emptyset \Rightarrow A = (K + v) \sqcup K\\
+    &\mu(A) = \mu(K + v) + \mu(K) = 2 \mu(K) < \mu(O) . 
+\end{align*}
+Что противоречит выбору $K$ и $O$. 
+
+В итоге получаем:
+\begin{equation}
+    \forall v \in (-\delta / 2; \delta / 2) \Rightarrow \exists k_1, k_2 \in K \subseteq E: v + k1 = k2. \implies (-\delta / 2; \delta / 2) \subset E - E.
+\end{equation}
+\end{solution}

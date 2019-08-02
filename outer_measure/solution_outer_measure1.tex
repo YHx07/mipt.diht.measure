@@ -1,0 +1,16 @@
+\begin{task}{1}
+Доказать, что если вопреки определению верхней меры, мера $m$ не $\sigma$-аддитивна, то найдется такое множество $A \in S$, для которого $\mu^{*}(A) < m(A)$. 
+\end{task}
+\begin{solution}
+По условию, $\exists A \in S \text{ и } \{ A_n \}_{n=1}^{\infty} \in S$ такие, что 
+
+\begin{equation}
+    A = \bigsqcup_{n=1}^{\infty}{A_n} \text{ и } m(A) \not = \sum_{n=1}^{\infty}{m(A_n)}.
+\end{equation}
+
+По свойству $m$, получаем:
+
+\begin{equation}
+    \mu^{*} (A) \leq \sum_{n=1}^{\infty}{m(A_n)} < m(A).
+\end{equation}
+\end{solution}

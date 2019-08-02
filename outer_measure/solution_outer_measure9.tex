@@ -1,0 +1,9 @@
+\begin{task}{9}
+Пусть $\mu$ --- классическая мера Лебега на $[0, 1]$. Построить такую последовательность $\{A_i\}$ множеств из $\mathfrak{M}$, что
+$$ \mu(\liminf_{i \to \infty} A_i) < \lowlim_{i\to\infty} \mu(A_i) $$
+\end{task}
+
+\begin{solution}
+Пусть $A_{2n-1} = \left(0, \dfrac{1}{2}\right), A_{2n} = \left(\dfrac{1}{2}, 1\right), n \in \mathbb{N}$. Тогда $\mu(A_n) = \dfrac{1}{2}$ при каждом $n$. Но т.к $A_{2n-1} \cap A_{2n} = \varnothing$, 
+$$ \mu(\liminf_{i \to \infty} A_i) = \mu(\varnothing) = 0.$$
+\end{solution}

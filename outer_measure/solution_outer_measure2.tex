@@ -1,0 +1,29 @@
+\begin{task}{2}
+Пусть $A \in X$ и $B \in X$. Показать, что $\mu^{*}(A \cup B) \leq \mu^{*}(A) + \mu^{*}(B)$.
+\end{task}
+\begin{solution}
+Пусть дано $\varepsilon > 0$. Тогда для $A$ и $B$ можно найти такие $\{ A_n \}_{n=1}^{\infty} , \{ B_n \}_{n=1}^{\infty} \in~S$, что:
+
+\begin{align*}
+    &A \subseteq \bigcup_{n=1}^{\infty}{A_n}, \mu^{*}(A) \geq \sum_{n=1}^{\infty}{m(A_n)} - \dfrac{\varepsilon}{2}; \\
+    &B \subseteq \bigcup_{n=1}^{\infty}{B_n}, \mu^{*}(B) \geq \sum_{n=1}^{\infty}{m(B_n)} - \dfrac{\varepsilon}{2}.
+\end{align*}
+
+Тогда
+
+\begin{equation}
+    A \cup B \subseteq \bigcup_{n=1}^{\infty}{\left( A_n \cup B_n \right)}.
+\end{equation}
+
+откуда следует:
+
+\begin{equation}
+    \mu^{*}\left( A \cup B \right) \leq \sum_{n=1}^{\infty}{m(A_n)} + \sum_{n=1}^{\infty}{m(B_n)} \leq \mu^{*}(A) + \mu^{*}(B) + \varepsilon.
+\end{equation}
+
+В силу произвольности $\varepsilon$ получаем требуемое неравенстов:
+
+\begin{equation}
+    \mu^{*}(A \cup B) \leq \mu^{*}(A) + \mu^{*}(B).
+\end{equation}
+\end{solution}
