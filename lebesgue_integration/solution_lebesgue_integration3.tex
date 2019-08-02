@@ -1,0 +1,12 @@
+\begin{task}{3}
+Верно ли, что функция $f(x) = \dfrac{\sin{x}}{x}$ интегрируема по Лебегу на прямой?
+\end{task}
+
+\begin{solution} 
+\begin{align*}
+    &f(x) = \dfrac{\sin{x}}{x} \\
+    &\int\limits_{\pi (n-1)}^{\pi n}\dfrac{|\sin{x}|}{x}dx \geqslant \dfrac{1}{\pi n}\int\limits_{\pi (n-1)}^{\pi n}|\sin{x}|dx = \dfrac{2}{\pi n}.\\
+    &\int\limits_0^{\pi N}\dfrac{|\sin{x}|}{x}dx \geqslant \dfrac{2}{\pi} \sum_{n = 1}^N\dfrac{1}{n} \text{ -- ряд расходится, значит}\\
+    &\int\limits_0^\infty \dfrac{|\sin{x}|}{x}dx = +\infty \text{ т.е. не интегрируема по лебегу}
+\end{align*}
+\end{solution}
