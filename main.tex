@@ -1,0 +1,151 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[l2tabu,orthodox]{nag}
+
+% Пожалуйста, не меняйте указанные ниже установки полей в документе
+\usepackage[left=10mm,right=15mm, top=15mm,bottom=15mm,bindingoffset=0cm]{geometry}
+
+\usepackage{indentfirst}
+
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{ccaption}
+\captiondelim{. }
+\usepackage{mathtools}
+\usepackage{amssymb,amsmath,amsthm}
+
+\usepackage{fontspec}
+%\usepackage{unicode-math}
+\usepackage{epigraph} %Эпиграф
+\renewcommand{\epigraphrule}{0pt} 
+
+\setmainfont[Ligatures=TeX]{STIX}
+\newfontfamily{\cyrillicfont}[Ligatures=TeX]{STIX}
+\setmonofont{Fira Mono}
+\newfontfamily{\cyrillicfonttt}{Fira Mono}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,.75}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.7,0}
+
+\usepackage[normalem]{ulem}
+\usepackage[textwidth=4cm,textsize=tiny]{todonotes}
+\newcommand{\hl}[1]{{\textcolor{red}{#1}}}  %можно выделить текст красным цветом
+\usepackage[pverb-linebreak=no]{examplep}
+\usepackage{amsmath}
+
+\usepackage[
+    draft = false,
+    unicode = true,
+    colorlinks = true,
+    allcolors = blue,
+    hyperfootnotes = true
+]{hyperref}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Утверждение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\newtheorem{notation}{Обозначение}
+\newtheorem{example}{Пример}
+     
+\newenvironment{task}[1]
+    {\addtocounter{subsubsection}{1}
+    \addcontentsline{toc}{subsubsection}{Задача #1}
+    \par\noindent\textbf{Задача \href{https://vk.com/doc3656763_485132047?hash=4c348f38c8d21a7c4c&dl=02e7c731e921487b47}{#1}. }}
+    {\smallskip}
+\newenvironment{solution}
+    {\par\noindent\textbf{Решение. }}
+    {\bigskip}
+    
+\DeclareMathOperator*\lowlim{\underline{lim}}
+\DeclareMathOperator*\uplim{\overline{lim}}
+
+\title{Подготовка к коллоквиуму по теории меры}
+\author{ФИВТ, 2 курс}
+
+\begin{document}
+\tracingall
+\maketitle
+\epigraph{\textit{Одного счетного пересечения объединения и последний шаг кокаином остался.}}{}
+\epigraph{\textit{Я назначаю кольцо с ее дички то есть я входил всегда везде.}}{}
+\epigraph{\textit{Дети не элемент никакого кольца не плод моего конца.}}{}
+\epigraph{\textit{Когда мы идем считать мы считаем.}}{\textit{VK::ЭРЛРЭ}}
+\newpage
+\tableofcontents
+
+
+%\newpage
+%\section{Системы множеств.}
+%\input{set_systems/solution_set_systems1.tex}
+%\input{set_systems/solution_set_systems2.tex}
+%\input{set_systems/solution_set_systems3.tex}
+%\input{set_systems/solution_set_systems4.tex}
+%\input{set_systems/solution_set_systems5.tex}
+%\input{set_systems/solution_set_systems6.tex}
+%\input{set_systems/solution_set_systems7.tex}
+%\input{set_systems/solution_set_systems8.tex}
+%\input{set_systems/solution_set_systems9.tex}
+%\input{set_systems/solution_set_systems10.tex}
+
+%\section{Мера.}
+%\input{measure/solution_measure1.tex}
+%\input{measure/solution_measure2.tex}
+%\input{measure/solution_measure3.tex}
+%\input{measure/solution_measure4.tex}
+%\input{measure/solution_measure5.tex}
+%\input{measure/solution_measure6.tex}
+%\input{measure/solution_measure7.tex}
+%\input{measure/solution_measure8.tex}
+%\input{measure/solution_measure9.tex}
+
+%\section{Внешняя мера. Мера Лебега.}
+%\input{outer_measure/solution_outer_measure1.tex}
+%\input{outer_measure/solution_outer_measure2.tex}
+%\input{outer_measure/solution_outer_measure3.tex}
+%\input{outer_measure/solution_outer_measure4.tex}
+%\input{outer_measure/solution_outer_measure5.tex}
+%\input{outer_measure/solution_outer_measure6.tex}
+%\input{outer_measure/solution_outer_measure7.tex}
+%\input{outer_measure/solution_outer_measure8.tex}
+%\input{outer_measure/solution_outer_measure9.tex}
+
+\section{Измеримые функции.}
+\input{measurable_function/solution_measurable_function1.tex}
+\input{measurable_function/solution_measurable_function2.tex}
+\input{measurable_function/solution_measurable_function3.tex}
+\input{measurable_function/solution_measurable_function4.tex}
+\input{measurable_function/solution_measurable_function5.tex}
+\input{measurable_function/solution_measurable_function6.tex}
+\input{measurable_function/solution_measurable_function7.tex}
+\input{measurable_function/solution_measurable_function8.tex}
+\input{measurable_function/solution_measurable_function9.tex}
+\input{measurable_function/solution_measurable_function10.tex}
+\input{measurable_function/solution_measurable_function11.tex}
+\input{measurable_function/solution_measurable_function12.tex}
+
+%\section{Сходимость.}
+%\input{convergence/solution2.tex}
+%\input{convergence/solution4.tex}
+%\input{convergence/solution5.tex}
+%\input{convergence/solution6.tex}
+%\section{Интеграл Лебега.}
+%\input{lebesgue_integration/solution_lebesgue_integration1.tex}
+%\input{lebesgue_integration/solution_lebesgue_integration2.tex}
+%\input{lebesgue_integration/solution_lebesgue_integration3.tex}
+%\input{lebesgue_integration/solution_lebesgue_integration4.tex}
+%\input{lebesgue_integration/solution_lebesgue_integration5.tex}
+\end{document}
