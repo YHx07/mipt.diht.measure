@@ -1,0 +1,13 @@
+\begin{task}{3}
+Пусть $\mu$ -- классическая мера Лебега на $[0; 1]$. Построить такую неизмеримую функцию $f : [0; 1] \rightarrow \mathbb{R}$, что для любого $c \in \mathbb{R}$ множество $f^{-1}(\lbrace c \rbrace)$ измеримо. 
+\end{task}
+\begin{solution}
+Пусть $E$ - неизмеримое множество. Тогда:
+\begin{equation}
+f(x) = \begin{cases}
+	x, \text{если $ x \in E$} \\
+    -x, \text{если $x \not \in E$}
+\end{cases}.
+\end{equation}
+$f(x)$ - неизмеримо. Действительно, $f^{-1}((0, +\infty))$ не измеримо. Но $\forall c \in \mathbb{R} \Rightarrow f^{-1}(\{c\}) - \text{точка} \Rightarrow f^{-1}(\{c\}) - \text{измеримо}$.
+\end{solution}

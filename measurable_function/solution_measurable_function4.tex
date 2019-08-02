@@ -1,0 +1,10 @@
+\begin{task}{4}
+Пусть $(X, M, \mu)$ --- измеримое пространство, $\{a_n\}_{n=1}^{\infty}$ --- всюду плотное множество в $\mathbb{R}$, а функция $f: X \rightarrow \mathbb{R}$ такова, что
+$$ \forall n f^{-1}((a_n, +\infty)) \in M.$$
+Доказать, что $f(x)$ измерима на $X$.
+\end{task}
+
+\begin{solution}
+Возьмем произвольное $c \in \mathbb{R}$. Т.к $\{a_n\}$ всюду плотно в $\mathbb{R}$, то найдется подпоследовательность $\{a_{n_k}\}_{k=1}^{\infty}$, такая что $a_{n_k} \downarrow c$ при $k \to \infty$. Тогда
+$$ f^{-1}((c, +\infty)) = \bigcup_{k=1}^{\infty} f^{-1}((a_{n_k}, +\infty)) \in M.$$
+\end{solution}
