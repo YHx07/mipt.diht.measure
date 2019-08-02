@@ -1,0 +1,17 @@
+ \begin{task}{1}
+Построить пример полукольца $S$ и такой функции $\varphi : S \to [0; +\infty)$, что $\forall A, B \in S: A \cap B  = \varnothing \text{ и } C = A \sqcup B \in S$
+выполнено равенство  $\varphi(C) = \varphi(A) + \varphi(B)$, но $\varphi$ --- не мера на $S$.
+\end{task}
+\begin{solution}
+Рассмотрим систему множеств $S = \{\varnothing, \{1\}, \{2\}, \{3\}, \{4\}, \{1, 2\}, \{1, 2, 3, 4\} \}$. Можно показать, что данная система является полукольцом. Определим на $S$ функцию $\varphi$ следующим образом:
+
+$\varphi(\varnothing) = 0$
+
+$\varphi(\{1\}) = \varphi(\{2\}) = \varphi(\{3\}) = \varphi(\{4\}) = 1$
+
+$\varphi(\{1, 2\}) = 2$
+
+$\varphi(\{1, 2, 3, 4\}) = 3$
+
+Тогда для данной функции выполняется равенство $\varphi(\{1, 2\}) = \varphi(\{1\}) + \varphi(\{2\})$, однако $\varphi$ не является мерой на $S$, т.к. $\varphi(\{1, 2, 3, 4\}) = 3 \neq 4 = \varphi(\{1, 2\}) + \varphi(\{3\}) + \varphi(\{4\})$.
+\end{solution}

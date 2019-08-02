@@ -1,0 +1,25 @@
+\begin{task}{3}
+\begin{enumerate}[(a)]
+\item Пусть $\mathcal{S}$ --- полукольцо с мерой $m$, а $\mathcal{S}_1 = \{A \in \mathcal{S}: m(A) = 0\}$. Доказать, что  $\mathcal{S}_1$ --- полукольцо.
+\item Пусть $\mathcal{R}$ --- кольцо с мерой $m$, а $\mathcal{R}_1 = \{A \in \mathcal{R}: m(A) = 0\}$. Доказать, что  $\mathcal{R}_1$ --- кольцо.
+\item Пусть $\mathcal{A}$ --- алгебра с мерой $m$, а $\mathcal{A}_1 = \{A \in \mathcal{A}: m(A) = 0\}$. Верно ли, что  $\mathcal{A}_1$ --- алгебра?
+\end{enumerate}
+\end{task}
+\begin{solution}
+\begin{enumerate}[(a)]
+\item\label{firstPt}
+Проверим выполнение соответствующих определений:
+\begin{enumerate}[1)]
+    \item \varnothing \in $\mathcal{S}_1$, т.к $m(\varnothing) = 0$.
+    \item Пусть $A, B \in \mathcal{S}_1$. Тогда $A, B \in \mathcal{S}$, $m(A) = 0$ и $m(A) = 0$.
+    Из этого следует, что $m(A \cap B) = 0$, т.е $A \cap B \in \mathcal{S}_1$.
+    \item Пусть $A, B \in \mathcal{S}_1, A \subset B$. Тогда $\exists B_1, \dots, B_n \in \mathcal{S}: A = B \sqcup B_1 \sqcup \dots \sqcup B_n$. Т.к. $A \in \mathcal{S}_1$, то $m (A) = 0$. Но тогда, т.к $B, B_1, \dots, B_n \subset A$, меры всех множеств $B, B_1, \dots, B_n$ равны нулю. Следовательно $B, B_1, \dots, B_n \in \mathcal{S}_1$.  
+\end{enumerate}
+\item Аналогично предыдущему пункту:
+\begin{enumerate}[1)]
+    \item \varnothing \in $\mathcal{R}_1$ (т.к $m(\varnothing) = 0)$, следовательно, $\mathcal{R}_1$ непусто.
+    \item Проверка пересечения множеств аналогична пункту~\eqref{firstPt}.
+\end{enumerate}
+\item Пусть $\mathcal{A}$ — все подмножества отрезка $[0, 1]$, измеримые по Жордану, тогда в $\mathcal{A}_1$ будут все точки отрезка $[0, 1]$, но в $\mathcal{A}_i$ не будет множества, содержащего их все, поэтому в $\mathcal{A}_1$ не будет единицы.
+\end{enumerate}
+\end{solution}

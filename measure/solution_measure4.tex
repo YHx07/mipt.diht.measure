@@ -1,0 +1,26 @@
+\begin{task}{4}
+Пусть $m$ -- $\sigma$-аддитиваня мера на полукольце $S$, множества $A, A_1, \ldots, A_i, \ldots$ придлежат $S$, причем $A_1 \supseteq A_2 \supseteq \ldots$ и
+\[
+A = \bigcap_{i = 1}^{\infty}A_i.
+\]
+Доказать, что
+\[
+m(A) = \lim\limits_{i \to \infty}m(A_i).
+\]
+Это свойство меры называется \textit{непрерывностью.}
+\end{task}
+\begin{solution}
+Рассмотрим $\lbrace A_n \rbrace \in S$ такую,  что $A_1 \supseteq A_2 \supseteq A_3 \ldots$, и $A = \underset{n=1}{\overset{\infty}{\bigcap}} A_n$.
+
+Обозначим $B_i = A_i \setminus A_{i+1}$, тогда $A_1 \setminus A = 
+\bigsqcup\limits_i B_i = \bigsqcup\limits_i \bigsqcup\limits_j C_{i, j}$, где 
+$C_{i, j} \in S$
+
+\begin{gather*}
+m(A_1) - m(A) = \sum_i \sum_j m(C_{i, j}) = 
+\lim_{k \to \infty} \sum_{i=1}^{k-1} \sum_{j = 1}^{j_i} m(C_{i,j}) = \lim_{k 
+\to \infty} \sum\limits_{i=1}^{k-1} \left( m(A_i) - m(A_{i+1}) \right) =\\ = 
+m(A_1) - \underset{i \to \infty}{\lim} m(A_i)
+\end{gather*}
+чтд.
+\end{solution}
